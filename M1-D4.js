@@ -105,7 +105,18 @@ const cutString = (str) =>
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
 */
 
-/* WRITE YOUR CODE HERE */
+const giveMeRandom = (n) => {
+  const arr = [];
+
+  for (let i = 0; i < n; i++) {
+    const randomNum = Math.floor(
+      Math.random() * 11
+    );
+    arr.push(randomNum);
+  }
+
+  return arr;
+};
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
