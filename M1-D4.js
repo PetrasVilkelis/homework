@@ -82,7 +82,17 @@ const reverseString = (string) =>
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
 
-/* WRITE YOUR CODE HERE */
+const upperFirst = (str) => {
+  const splitted = str.split(" ");
+
+  splitted.forEach((word, i) => {
+    splitted[i] =
+      word.charAt(0).toUpperCase() +
+      word.slice(1);
+  });
+
+  return splitted.join(" ");
+};
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
