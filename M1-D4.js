@@ -19,6 +19,8 @@ Write a function "crazySum" which receives two given integers. If the two values
 const crazySum = (x, y) => {
   if (x === y) {
     return (x + y) * 3;
+  } else {
+    return x + y;
   }
 };
 
