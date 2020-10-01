@@ -63,7 +63,13 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
-/* WRITE YOUR CODE HERE */
+const check3and7 = (num) => {
+  if (num % 3 == 0) {
+    return "Multiple of 3";
+  } else if (num % 7 == 0) {
+    return "Multiple of 7";
+  }
+};
 
 /* EXERCISE 7
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
