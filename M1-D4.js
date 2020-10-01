@@ -16,6 +16,12 @@ const area = (l1, l2) => l1 * l2;
 Write a function "crazySum" which receives two given integers. If the two values are same, then returns triple their sum.
 */
 
+const crazySum = (x, y) => {
+  if (x === y) {
+    return (x + y) * 3;
+  }
+};
+
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the 
 absolute difference between a given number and 19. 
