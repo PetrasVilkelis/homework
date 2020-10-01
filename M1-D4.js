@@ -98,7 +98,8 @@ const upperFirst = (str) => {
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+const cutString = (str) =>
+  str.slice(1, str.length - 1);
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
