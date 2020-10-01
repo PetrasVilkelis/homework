@@ -75,7 +75,8 @@ const check3and7 = (num) => {
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+const reverseString = (string) =>
+  string.split("").reverse().join("");
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
