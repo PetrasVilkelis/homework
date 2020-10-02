@@ -143,9 +143,32 @@ function whatDayIsIt() {
     }
 */
 
+function rollTheDices(num) {
+  const values = [];
+  let sum = 0;
+  for (let i = 0; i < num; i++) {
+    const random =
+      Math.floor(Math.random() * 6) + 1;
+    values.push(random);
+    sum += random;
+  }
+
+  return {
+    sum,
+    values,
+  };
+}
+
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
+
+function howManyDays(date) {
+  const today = new Date();
+  console.log(today, date);
+
+  return Math.ceil((today - date) / 8.64e7);
+}
 
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
