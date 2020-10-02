@@ -174,6 +174,14 @@ function howManyDays(date) {
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
 
+function isTodayMyBday() {
+  const today = new Date();
+  return (
+    today.getDate() === 7 &&
+    today.getMonth() === 9
+  );
+}
+
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
 
