@@ -302,6 +302,12 @@ function deleteX(num) {
   ***
 */
 
+function halfTree(num) {
+  for (let i = 0; i < num; i++) {
+    console.log("*".repeat(i + 1));
+  }
+}
+
 /* Ex.22 
   Create a function Tree that receives the height and creates an "*" tree with that height
   Example: 
@@ -311,9 +317,31 @@ function deleteX(num) {
   *****
 */
 
+function tree(height) {
+  for (let i = 0; i < height; i++) {
+    let chars;
+    if (i === 0) {
+      chars = 1;
+    } else {
+      chars = i * 2 + 1;
+    }
+    console.log(
+      `${" ".repeat(height - 1 - i)}${"*".repeat(
+        chars
+      )}`
+    );
+  }
+}
+
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
 */
+
+function isItPrime(num) {
+  for (let i = 2; i < num; i++)
+    if (num % i === 0) return false;
+  return num > 1;
+}
 
 /* Movies array is an example array, used for the exs. Don't change it :)  */
 const movies = [
