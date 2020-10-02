@@ -15,29 +15,47 @@
    Create a variable test that contains a string
 */
 
+const test = "Hello, World!";
+
 /* Ex.B
     Create a variable sum that contains the result of the sum between 10 and 20 
 */
+
+const sum = 10 + 20;
 
 /* Ex.C 
     Create a variable random that contains a random number between 0 and 20 (should be randomly created at each execution)
 */
 
+const random = Math.floor(Math.random() * 21);
+
 /* Ex.D
     Create a variable Me containing and object with the current information: Name = Your Name, Surname = Your Surname, Age = Your Age
 */
+
+const me = {
+  name: "Petras",
+  surname: "Vilkelis",
+  age: 19,
+};
 
 /* Ex.E 
     Programmatically remove the Age from the previously create object Me
 */
 
+delete me.age;
+
 /* Ex.F 
    Programmatically add to the object Me an array "skills" that contains the programming languages that you know
 */
 
+me.skills = ["JavaScript", "Python", "PHP"];
+
 /* Ex.G 
    Programmatically remove the last skill from the array "skills" inside of the "me" object
 */
+
+me.skills.pop();
 
 // JS Functions
 /* Ex.1
@@ -157,7 +175,8 @@
 /* Movies array is an example array, used for the exs. Don't change it :)  */
 const movies = [
   {
-    Title: "The Lord of the Rings: The Fellowship of the Ring",
+    Title:
+      "The Lord of the Rings: The Fellowship of the Ring",
     Year: "2001",
     imdbID: "tt0120737",
     Type: "movie",
@@ -165,7 +184,8 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
   {
-    Title: "The Lord of the Rings: The Return of the King",
+    Title:
+      "The Lord of the Rings: The Return of the King",
     Year: "2003",
     imdbID: "tt0167260",
     Type: "movie",
@@ -173,7 +193,8 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
   },
   {
-    Title: "The Lord of the Rings: The Two Towers",
+    Title:
+      "The Lord of the Rings: The Two Towers",
     Year: "2002",
     imdbID: "tt0167261",
     Type: "movie",
@@ -221,7 +242,8 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg",
   },
   {
-    Title: "Greystoke: The Legend of Tarzan, Lord of the Apes",
+    Title:
+      "Greystoke: The Legend of Tarzan, Lord of the Apes",
     Year: "1984",
     imdbID: "tt0087365",
     Type: "movie",
