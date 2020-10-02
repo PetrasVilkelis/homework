@@ -62,31 +62,77 @@ me.skills.pop();
     Write the function Dice that randomize an integer number between 1 and 6
 */
 
+function dice() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
 /* Ex.2 
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
 */
+
+function whoIsBigger(x, y) {
+  return Math.max(x, y);
+}
 
 /* Ex.3
     Write the function SplitMe that receives a String and returns an array with every word in that string
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
 */
 
+function splitMe(str) {
+  return str.split(" ");
+}
+
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
 */
+
+function deleteOne(str, bool) {
+  if (bool) {
+    return str.slice(1);
+  } else {
+    return str.slice(0, str.length - 1);
+  }
+}
 
 /* Ex.5
    Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
    Ex.: OnlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
 
+function onlyLetters(str) {
+  return str.replace(/[0-9]/g, "");
+}
+
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
+function isThisAnEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
+
+function whatDayIsIt() {
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  const d = new Date();
+  const n = d.getDay();
+
+  return days[n - 1];
+}
 
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
