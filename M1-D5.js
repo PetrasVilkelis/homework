@@ -189,41 +189,107 @@ function isTodayMyBday() {
    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
 
+function deleteProp(obj, str) {
+  delete obj[str];
+  return obj;
+}
+
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
 */
+
+function olderMovie() {
+  return movies.reduce((prev, current) => {
+    return prev.Year > current.Year
+      ? prev
+      : current;
+  });
+}
 
 /* Ex.13
     Write the function CountMovies that returns the number of movies into the array
 */
 
+function countMovies() {
+  return movies.length;
+}
+
 /* Ex.14
     Write the function OnlyTitles that creates an array with only the titles of the movies
 */
+
+function onlyTitles() {
+  const arr = [];
+
+  for (let movie of movies) {
+    arr.push(movie.Title);
+  }
+
+  return arr;
+}
 
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
 
+function onlyThisMillennium() {
+  return movies.filter(
+    (movie) => movie.Year >= 2000
+  );
+}
+
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
 */
+
+function getMovieById(id) {
+  return movies.find(
+    (movie) => movie.imdbID === id
+  );
+}
 
 /* Ex.17
     Write the function SumYears that returns the sum of the years the movie has been produced
 */
 
+function sumYears(movie) {
+  return new Date().getFullYear() - movie.Year;
+}
+
 /* Ex.18
     Write the function SearchMovie that receives a string and returns all the movies with that string in the title
 */
+
+function searchMovie(str) {
+  return movies.filter((movie) =>
+    movie.Title.includes(str)
+  );
+}
 
 /* Ex.19
     Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
 */
 
+function searchAndDivide(str) {
+  const match = movies.filter((movie) =>
+    movie.Title.includes(str)
+  );
+  const nonMatch = movies.filter(
+    (movie) => !movie.Title.includes(str)
+  );
+
+  return { match, nonMatch };
+}
+
 /* Ex.20
    Write the function DeleteX that receives a number and returns an array without the element in that position
 */
+
+function deleteX(num) {
+  const newMovies = movies;
+  newMovies.splice(num, 1);
+  return newMovies;
+}
 
 // JS Advanced
 
