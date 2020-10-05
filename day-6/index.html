@@ -2,26 +2,26 @@
         You have been assigned to the creation of a Smartphone Shop Website.
         The shop is just a showcase of the products of the shop with some extra informations.
         No shopping cart / checkout features are required.
-        EX1.:
+        EX1.: DONE
         Add H1 title with the name of the shop
-        EX2.: 
+        EX2.: DONE
         Add a TABLE with the top 5 products of the shop
-        EX3.: 
+        EX3.: DONE
         Each product should have one image, title, description and price
-        EX4.:
+        EX4.: DONE
         Add Map to the shop 
-        EX5.: 
+        EX5.:  DONE
         Add the links to Amazon products for each item in the table
-        EX6.:
+        EX6.: DONE
         Add a footer with the address and the name of the shop
-        EX7.: 
+        EX7.:  DONE
         Add a message board where the user can type a message in it (only client side)
         // EXTRA 
-        EX8.: 
+        EX8.: DONE
         Write a function to change the heading text
-        EX9.:
+        EX9.: DONE
         Write a function to change the page background color
-        EX10.:
+        EX10.: DONE
         Write a function to change the footer address with a fake one
     -->
 
@@ -42,7 +42,7 @@
   <body>
     <div class="container">
       <h1 class="title">Foot Locker</h1>
-      <h2 class="message">Today Top 5:</h2>
+      <h2 class="subtitle">Today Top 5:</h2>
       <table class="table">
         <tr>
           <th>Image</th>
@@ -52,6 +52,20 @@
           <th>Link</th>
         </tr>
       </table>
+
+      <h2 class="subtitle">Chat Room</h2>
+      <div class="board">
+        <ul id="messages"></ul>
+        <input
+          type="text"
+          placeholder="Say something..."
+        /><button
+          id="myBtn"
+          onclick="sendMessage()"
+        >
+          Send
+        </button>
+      </div>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151686.46202063246!2d9.90628275991188!3d53.55596502451893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18c5ba88875ed%3A0xa814cc7895810b3a!2sFoot%20Locker!5e0!3m2!1sen!2sus!4v1601904879970!5m2!1sen!2sus"
@@ -65,9 +79,14 @@
       ></iframe>
 
       <footer>
-        Billstedter Hauptstraße 31, 22111 Hamburg,
-        Germany<br />Foot Locker 2020 &copy; All
-        rights reserved.
+        <p class="address">
+          Billstedter Hauptstraße 31, 22111
+          Hamburg, Germany
+        </p>
+        <p>
+          Foot Locker 2020 &copy; All rights
+          reserved.
+        </p>
       </footer>
     </div>
 

@@ -25,7 +25,11 @@
   margin: 1rem 0;
 }
 
-.message {
+.subtitle {
+  margin-bottom: 1rem;
+}
+
+iframe {
   margin-bottom: 1rem;
 }
 
@@ -55,8 +59,45 @@
   color: white;
 }
 
+.board {
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.chat {
+  list-style: none;
+}
+
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   line-height: 150%;
+}
+
+.message {
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.message::before {
+  content: "You: ";
+}
+
+input {
+  font-size: 1.5rem;
+  width: calc(100% - 57px);
+}
+
+button {
+  font-size: 1.5rem;
+}
+
+.board {
+  background-color: #f2f2f2;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+#messages {
+  min-height: 150px;
 }

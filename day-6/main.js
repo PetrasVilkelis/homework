@@ -92,7 +92,28 @@ function changeBackgroundColor(color) {
   body.style.backgroundColor = color;
 }
 
-function changeFooterAddress(color) {
-  const body = document.querySelector("body");
-  body.style.backgroundColor = color;
+function changeFooterAddress(fakeAddress) {
+  const address = document.querySelector(
+    ".address"
+  );
+  address.innerText = fakeAddress;
+}
+
+function sendMessage() {
+  const input = document.querySelector("input");
+
+  if (!input.value) return;
+
+  const parent = document.querySelector(
+    "#messages"
+  );
+
+  const li = document.createElement("li");
+
+  li.classList = "message";
+  li.innerText = input.value;
+
+  parent.appendChild(li);
+
+  input.value = "";
 }
