@@ -90,6 +90,11 @@ iframe {
 
 .btn {
   font-size: 1.5rem;
+  background-color: #353132;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 0.1rem;
 }
 
 .board {
