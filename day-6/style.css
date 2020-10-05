@@ -68,7 +68,7 @@ iframe {
   list-style: none;
 }
 
-footer {
+.footer {
   text-align: center;
   padding: 0 0 1rem 0;
   line-height: 150%;
@@ -83,12 +83,12 @@ footer {
   content: "You: ";
 }
 
-input {
+.input {
   font-size: 1.5rem;
   width: calc(100% - 57px);
 }
 
-button {
+.btn {
   font-size: 1.5rem;
 }
 
