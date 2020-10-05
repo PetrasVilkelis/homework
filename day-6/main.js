@@ -105,7 +105,7 @@ function sendMessage() {
   if (!input.value) return;
 
   const parent = document.querySelector(
-    "#messages"
+    ".messages"
   );
 
   const li = document.createElement("li");

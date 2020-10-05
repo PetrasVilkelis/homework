@@ -98,6 +98,6 @@ iframe {
   padding: 0.5rem;
 }
 
-#messages {
+.messages {
   min-height: 150px;
 }
