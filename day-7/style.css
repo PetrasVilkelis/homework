@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 992px;
+  margin: auto;
+}
+
+.red-color {
+  color: red;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+}
+
+iframe {
+  margin-bottom: 1rem;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr {
+  background-color: #fff;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #353132;
+  color: white;
+}
+
+.board {
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.chat {
+  list-style: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 0 0 1rem 0;
+  line-height: 150%;
+}
+
+.message {
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.message::before {
+  content: "You: ";
+}
+
+.input {
+  font-size: 1.5rem;
+  width: calc(100% - 57px);
+}
+
+.btn {
+  font-size: 1.5rem;
+  background-color: #353132;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 0.1rem;
+}
+
+.board {
+  background-color: #f2f2f2;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.messages {
+  min-height: 150px;
+}

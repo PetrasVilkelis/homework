@@ -1,0 +1,137 @@
+<!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.: DONE
+        Add H1 title with the name of the shop
+        EX2.: DONE
+        Add a TABLE with the top 5 products of the shop
+        EX3.: DONE
+        Each product should have one image, title, description and price
+        EX4.: DONE
+        Add Map to the shop 
+        EX5.:  DONE
+        Add the links to Amazon products for each item in the table
+        EX6.: DONE
+        Add a footer with the address and the name of the shop
+        EX7.:  DONE
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA 
+        EX8.: DONE
+        Write a function to change the heading text
+        EX9.: DONE
+        Write a function to change the page background color
+        EX10.: DONE
+        Write a function to change the footer address with a fake one
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1
+        onclick="makeItClickable()"
+        class="title"
+        onmouseover="addClassToTitle()"
+        onmouseout="removeClassFromTitle()"
+      >
+        Foot Locker
+      </h1>
+      <h2 class="subtitle">Top 5 Products:</h2>
+      <table class="table">
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Link</th>
+        </tr>
+      </table>
+
+      <h2 class="subtitle">Message Board:</h2>
+      <div class="board">
+        <ul class="messages"></ul>
+        <input
+          class="input"
+          type="text"
+          placeholder="Say something..."
+        /><button class="btn">Send</button>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151686.46202063246!2d9.90628275991188!3d53.55596502451893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18c5ba88875ed%3A0xa814cc7895810b3a!2sFoot%20Locker!5e0!3m2!1sen!2sus!4v1601904879970!5m2!1sen!2sus"
+        width="100%"
+        height="450"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+
+      <h2 id="listTitle">Todo List</h2>
+      <input
+        id="titleInput"
+        type="text"
+        onchange="changeListTitle()"
+      />
+      <ul id="firstList">
+        <li><p>1st</p></li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <button
+        class="btn"
+        onclick="changePContent()"
+      >
+        Click me
+      </button>
+
+      <div class="todoForm">
+        <input type="text" />
+        <button onclick="addToTheSecond()">
+          Add new todo
+        </button>
+      </div>
+
+      <button onclick="paintItGreen()">
+        Make it green
+      </button>
+
+      <footer class="footer">
+        <p class="address">
+          Billstedter Hauptstraße 31, 22111
+          Hamburg, Germany
+        </p>
+        <p>
+          Foot Locker 2020 &copy; All rights
+          reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="ex.js"></script>
+  </body>
+</html>
