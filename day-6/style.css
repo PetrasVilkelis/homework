@@ -13,16 +13,13 @@
 .title {
   font-size: 3rem;
   text-align: center;
+  margin: 1rem 0;
 }
 
 .table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.title {
-  margin: 1rem 0;
 }
 
 .subtitle {

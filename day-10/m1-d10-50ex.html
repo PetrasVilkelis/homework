@@ -1,0 +1,516 @@
+<!--
+
+        HTML EXERCISES
+
+        1) Create a title for the page
+        2) Create a heading
+        3) Create an ordered list
+        4) Create a table with 5 columns and 4 rows
+        5) Add an image to each second cell of every row
+        6) Add a anchor link for every image
+        7) Merge together 2 table cells
+        8) Divide the page using a horizontal line
+        9) Create a container with a nested paragraph and a nested unordered list
+        10) Create a footer with some information about the page creator 
+
+        CSS EXERCISES
+
+        11) Give a maximum width to the body and center it in the page
+        12) Set every h1 to be centered
+        13) Change the color of each link in the page
+        14) Create a class with a border
+        15) Set table to have rounded corners
+        16) Add margin between every paragraph
+        17) Create a class which change font size and boldness
+        18) Create a class to hide a content
+        19) Add a green border to each td
+        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+
+        JS EXERCISES
+
+        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
+        22) Create an object with properties such name, surname, email
+        23) Delete Email from the previously created object
+        24) Create an array with 10 strings in it
+        25) Print in the console every string in the previous array
+        26) Create an array with 100 random numbers in it
+        27) Wrote a function to get the MAX and the MIN from the previously created array
+        28) Create an array of arrays, in which every array has 10 random numbers
+        29) Create a function that gets 2 arrays and returns the longest one
+        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+
+        DOM 
+
+        31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
+
+        EXTRA 
+
+        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        max-width: 666px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        color: green;
+      }
+
+      .border {
+        border: 1px solid;
+      }
+
+      table {
+        border-radius: 0.25rem;
+        background-color: aliceblue;
+
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 0.5rem;
+        border: solid 1px green;
+      }
+
+      p {
+        margin: 2rem 0;
+      }
+
+      .bold {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      tr {
+        border: 1px dotted red;
+      }
+    </style>
+
+    <title>Challenge</title>
+  </head>
+
+  <body>
+    <h1>Challange</h1>
+    <div id="container">
+      <a href="#">I am a link</a>
+    </div>
+    <ol>
+      <li>Dog</li>
+      <li>Cat</li>
+      <li>Bear</li>
+    </ol>
+    <table>
+      <tr class="red-border">
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>Occupation</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td colspan="2">Bob Burger</td>
+        <td>
+          50
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>Mechanic</td>
+        <td>
+          Philadelphia
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>
+          Doe
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>23</td>
+        <td>
+          Nurse
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>Phoenix</td>
+      </tr>
+      <tr>
+        <td>Josh</td>
+        <td>
+          Jackson
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>19</td>
+        <td>
+          Taxi Driver
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Chloe</td>
+        <td>
+          Atkinson
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>33</td>
+        <td>
+          Cashier
+          <a href="#"
+            ><img
+              src="https://picsum.photos/25"
+              alt=""
+          /></a>
+        </td>
+        <td>Los Angeles</td>
+      </tr>
+    </table>
+    <hr />
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Dolorum, inventore
+        quibusdam modi optio natus impedit vero
+        consequuntur iste officia labore
+        voluptates. Voluptate, architecto itaque.
+        Eveniet nobis excepturi non sit? Esse.
+      </p>
+      <ul>
+        <li>Withdrawal</li>
+        <li>Exuding</li>
+        <li>Lead</li>
+      </ul>
+    </div>
+
+    <button id="hider">hide images</button>
+
+    <button id="toggleTable">toggle table</button>
+
+    <button id="delLetter">delete letter</button>
+
+    <button id="delTd">delete random td</button>
+
+    <footer>Created by Petras</footer>
+
+    <script>
+      const x = "John";
+      const y = "Doe";
+      console.log(`${x} <> ${y}`);
+
+      const obj = {
+        name: "Thomas",
+        surname: "Jefferson",
+        email: "tjeff@hotmail.com",
+      };
+
+      delete obj.email;
+
+      const arr = [
+        "Towels",
+        "programming",
+        "static",
+        "Wall",
+        "Lead",
+        "copying",
+        "Administrator",
+        "end-to-end",
+        "hacking",
+        "Handmade Granite Computer",
+      ];
+
+      console.log(arr.toString());
+
+      const arr2 = [];
+
+      for (let i = 0; i < 100; i++) {
+        const num =
+          Math.floor(Math.random() * 100) + 1;
+        arr2.push(num);
+      }
+
+      function maxAndMin() {
+        return {
+          min: Math.min(...arr2),
+          max: Math.max(...arr2),
+        };
+      }
+
+      const arr3 = [];
+
+      for (let i = 0; i < 5; i++) {
+        arr3.push([]);
+        for (let j = 0; j < 10; j++) {
+          const num =
+            Math.floor(Math.random() * 100) + 1;
+          arr3[i].push(num);
+        }
+      }
+
+      function longerArr(arr1, arr2) {
+        return arr1.length > arr2.length
+          ? arr1
+          : arr2;
+      }
+
+      function biggerArrSum(arr1, arr2) {
+        return arr1.reduce((a, b) => a + b, 0) >
+          arr2.reduce((a, b) => a + b, 0)
+          ? arr1
+          : arr2;
+      }
+
+      console.log(
+        document.querySelector("#container")
+      );
+
+      //   const tds = document.querySelectorAll("td");
+
+      //   console.log(tds);
+
+      //   for (let i = 0; i < tds.length; i++) {
+      //     tds[i].innerText = "updated";
+      //   }
+
+      function changeHeading(text) {
+        document.querySelector(
+          "h1"
+        ).innerText = text;
+      }
+
+      function newRow() {
+        const table = document.querySelector(
+          "tbody"
+        );
+
+        const td = document.createElement("tr");
+
+        td.innerHTML = `<td>hey</td>`;
+
+        table.appendChild(td);
+      }
+
+      function addTest() {
+        const trs = document.querySelectorAll(
+          "tr"
+        );
+
+        for (const tr of trs) {
+          tr.classList.add("test");
+        }
+      }
+
+      function makeItRed() {
+        const as = document.querySelectorAll("a");
+
+        for (const a of as) {
+          a.style.backgroundColor = "red";
+        }
+      }
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => console.log("Page loaded")
+      );
+
+      function newLi() {
+        const ul = document.querySelector("ul");
+
+        const li = document.createElement("li");
+
+        li.innerText = `new list item`;
+
+        ul.appendChild(li);
+      }
+
+      function emptyUl() {
+        const ul = document.querySelector("ul");
+        ul.innerText = "";
+      }
+
+      document
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("mouseover", (e) => {
+            alert(e.target.href);
+          })
+        );
+
+      document
+        .querySelector("#hider")
+        .addEventListener("click", () => {
+          document
+            .querySelectorAll("img")
+            .forEach(
+              (img) =>
+                (img.style.display = "none")
+            );
+        });
+
+      document
+        .querySelector("#toggleTable")
+        .addEventListener("click", () => {
+          const table = document.querySelector(
+            "table"
+          );
+          table.style.display =
+            table.style.display === "none"
+              ? "block"
+              : "none";
+        });
+
+      function sumAllTableNums() {
+        const tds = document.querySelectorAll(
+          "td"
+        );
+
+        let acc = 0;
+
+        for (const td of tds) {
+          if (+td.innerText <= 0) break;
+          acc += +td.innerText;
+        }
+      }
+
+      document
+        .querySelector("#delLetter")
+        .addEventListener("click", () => {
+          const heading = document.querySelector(
+            "h1"
+          );
+          heading.innerText = heading.innerText.slice(
+            1
+          );
+        });
+
+      document
+        .querySelectorAll("td")
+        .forEach((td) =>
+          td.addEventListener("click", (e) => {
+            console.log("works");
+            e.target.style.backgroundColor =
+              "yellow";
+          })
+        );
+
+      document
+        .querySelector("#delTd")
+        .addEventListener("click", () => {
+          const tds = document.querySelectorAll(
+            "td"
+          );
+
+          const random = Math.floor(
+            Math.random() * tds.length
+          );
+
+          tds[random].remove();
+        });
+
+      document
+        .querySelectorAll("td")
+        .forEach((td) => {
+          td.addEventListener(
+            "mouseenter",
+            () => {
+              td.style.border = "1px solid pink";
+            }
+          );
+          td.addEventListener(
+            "mouseleave",
+            () => {
+              td.style.border = "1px solid green";
+            }
+          );
+        });
+
+      function newTable() {
+        const table = document.createElement(
+          "table"
+        );
+
+        let trs = ``;
+
+        for (let i = 0; i < 4; i++) {
+          trs += `<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>`;
+        }
+
+        table.innerHTML = `<tbody>${trs}</tbody>`;
+
+        document.body.appendChild(table);
+      }
+
+      function removeTable() {
+        document.querySelector("table").remove();
+      }
+    </script>
+  </body>
+</html>

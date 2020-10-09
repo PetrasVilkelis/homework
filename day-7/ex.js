@@ -61,7 +61,7 @@ const changeListTitle = function () {
 /* EXERCISE 6
        Write a function to add a new item ONLY to the second list (create an input field + add button)
   */
-const addToTheSecond = function (content) {
+const addToTheSecond = function () {
   const secondList = document.querySelector(
     "#secondList"
   );
@@ -69,11 +69,15 @@ const addToTheSecond = function (content) {
     ".todoForm>input"
   );
 
+  if (!input.value) return;
+
   const el = document.createElement("li");
 
   el.innerHTML = input.value;
 
   secondList.append(el);
+
+  input.value = "";
 };
 /* EXERCISE 7
       Write a function to make the first UL disappear (button)
